@@ -5,6 +5,32 @@ export default gql`
     """
     Test Message. 
     """
-    testMessage: String!
+    searchArticle(page: String): SearchArticleResponse!
   }
+  
+  type SearchArticleResponse {
+    parse: SearchArticleParse
+  }
+
+  type SearchArticleParse {
+    title: String
+    categories: [ArticleCategory]
+    sections: [ArticleSection]
+  }
+
+  type ArticleCategory {
+    sortKey: String
+    category: String
+    hidden: Boolean
+  }
+
+  type ArticleSection {
+    toclevel: Int
+    level: Int
+    line: String
+    number: String
+    index: String
+    anchor: String
+  }
+  
 `;
