@@ -1,3 +1,4 @@
 node_modules
 dist
 *.local
+# .env file is not ignored deliberately
