@@ -13,24 +13,24 @@ export default gql`
   }
 
   type SearchArticleParse {
-    title: String
-    categories: [ArticleCategory]
-    sections: [ArticleSection]
+    title: String!
+    categories: [ArticleCategory]!
+    sections: [ArticleSection]!
   }
 
   type ArticleCategory {
-    sortkey: String
-    category: String
-    hidden: Boolean
+    sortkey: String!
+    category: String!
+    hidden: Boolean!
   }
 
   type ArticleSection {
-    toclevel: Int
-    level: Int
-    line: String
-    number: String
-    index: String
-    anchor: String
+    toclevel: Int!
+    level: Int!
+    line: String!
+    number: String!
+    index: String!
+    anchor: String!
   }
   
 `;

@@ -13,19 +13,19 @@ export type Scalars = {
 
 export type ArticleCategory = {
   __typename?: 'ArticleCategory';
-  sortKey?: Maybe<Scalars['String']>;
-  category?: Maybe<Scalars['String']>;
-  hidden?: Maybe<Scalars['Boolean']>;
+  sortkey: Scalars['String'];
+  category: Scalars['String'];
+  hidden: Scalars['Boolean'];
 };
 
 export type ArticleSection = {
   __typename?: 'ArticleSection';
-  toclevel?: Maybe<Scalars['Int']>;
-  level?: Maybe<Scalars['Int']>;
-  line?: Maybe<Scalars['String']>;
-  number?: Maybe<Scalars['String']>;
-  index?: Maybe<Scalars['String']>;
-  anchor?: Maybe<Scalars['String']>;
+  toclevel: Scalars['Int'];
+  level: Scalars['Int'];
+  line: Scalars['String'];
+  number: Scalars['String'];
+  index: Scalars['String'];
+  anchor: Scalars['String'];
 };
 
 export type Query = {
@@ -41,9 +41,9 @@ export type QuerySearchArticleArgs = {
 
 export type SearchArticleParse = {
   __typename?: 'SearchArticleParse';
-  title?: Maybe<Scalars['String']>;
-  categories?: Maybe<Array<Maybe<ArticleCategory>>>;
-  sections?: Maybe<Array<Maybe<ArticleSection>>>;
+  title: Scalars['String'];
+  categories: Array<Maybe<ArticleCategory>>;
+  sections: Array<Maybe<ArticleSection>>;
 };
 
 export type SearchArticleResponse = {
@@ -152,19 +152,19 @@ export type ResolversParentTypes = {
 };
 
 export type ArticleCategoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['ArticleCategory'] = ResolversParentTypes['ArticleCategory']> = {
-  sortKey?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  category?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  hidden?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  sortkey?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  category?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  hidden?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type ArticleSectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['ArticleSection'] = ResolversParentTypes['ArticleSection']> = {
-  toclevel?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  level?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  line?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  number?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  index?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  anchor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  toclevel?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  level?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  line?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  number?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  index?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  anchor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -173,9 +173,9 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
 };
 
 export type SearchArticleParseResolvers<ContextType = any, ParentType extends ResolversParentTypes['SearchArticleParse'] = ResolversParentTypes['SearchArticleParse']> = {
-  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  categories?: Resolver<Maybe<Array<Maybe<ResolversTypes['ArticleCategory']>>>, ParentType, ContextType>;
-  sections?: Resolver<Maybe<Array<Maybe<ResolversTypes['ArticleSection']>>>, ParentType, ContextType>;
+  title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  categories?: Resolver<Array<Maybe<ResolversTypes['ArticleCategory']>>, ParentType, ContextType>;
+  sections?: Resolver<Array<Maybe<ResolversTypes['ArticleSection']>>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
