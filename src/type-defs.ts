@@ -21,7 +21,7 @@ export default gql`
   type ArticleCategory {
     sortkey: String!
     category: String!
-    hidden: Boolean!
+    hidden: Boolean
   }
 
   type ArticleSection {
